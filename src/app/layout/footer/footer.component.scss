@@ -1,0 +1,28 @@
+footer {
+  border-top: 1px solid var(--color-system-gray-3);
+  padding: 10px 0;
+  .container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      padding: 4px 0;
+      color: var(--color-system-gray-2);
+      img {
+        height: 40px;
+      }
+      a {
+        color: var(--color-system-green);
+      }
+
+      &.p-flex {
+        display: flex;
+        align-items: center;
+        img {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+}

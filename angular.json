@@ -28,6 +28,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/normalize.css/normalize.css",
+              "node_modules/primeflex/primeflex.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-job"
+    }
+  },
+  "defaultProject": "angular-job",
+  "cli": {
+    "analytics": false
+  }
 }

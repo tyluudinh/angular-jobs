@@ -1,0 +1,11 @@
+<button pButton
+        [icon]="icon"
+        [iconPos]="iconPos"
+        [disabled]="disabled"
+        [type]="type"
+        [label]="label"
+        [class]="className || ''"
+        (click)="handleOnClick()"
+>
+  <ng-content></ng-content>
+</button>

@@ -1,0 +1,17 @@
+<div class="job-card d-flex align-items-center justify-content-space-between m-bottom-12">
+  <div class="left">
+    <h4 class="text-gray-0 fw-500" pTooltip="{{job.title}}" tooltipPosition="top" showDelay="500" hideDelay="500">{{ job.title }}</h4>
+    <p class="text-gray-1">
+      <span class="time">{{updatedAt}}</span>
+      <span class="point">•</span>
+      <span>{{ job.level }}</span>
+    </p>
+  </div>
+  <div class="right d-flex justify-content-space-between align-items-center">
+    <p class="location text-gray-0 d-flex align-items-center ">
+      <i class="pi pi-map-marker m-right-8"></i>
+      {{job.location}}
+    </p>
+    <app-button (onClick)="handleOnClickEdit()" className="bg-red ui-button-danger fw-500" label="Edit Job"></app-button>
+  </div>
+</div>

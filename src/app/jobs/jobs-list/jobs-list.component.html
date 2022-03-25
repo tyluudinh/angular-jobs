@@ -1,0 +1,12 @@
+<div class="jobs-list">
+  <app-jobs-list-header></app-jobs-list-header>
+  <div class="container">
+    <h2 class="text-gray-0 text-center fw-bold">Job Openings</h2>
+    <p class="text-gray-1 text-center">{{totalJobs}} jobs</p>
+
+    <app-jobs-list-filter></app-jobs-list-filter>
+
+    <app-jobs-list-section *ngFor="let jobsCard of jobService.jobsListCard | async" [jobsList]="jobsCard"></app-jobs-list-section>
+    <app-job-modal-edit></app-job-modal-edit>
+  </div>
+</div>

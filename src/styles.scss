@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/common";
+@import "assets/scss/overwrite";
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+$max-width: 768px;
+
+app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  max-width: $max-width;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}

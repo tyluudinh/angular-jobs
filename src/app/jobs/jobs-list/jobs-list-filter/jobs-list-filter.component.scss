@@ -1,0 +1,11 @@
+.jobs-list-filter {
+  p {
+    font-size: 12px;
+  }
+  .filter-dropdown-group {
+    app-dropdown {
+      flex: 0 0 32%;
+      max-width: 32%;
+    }
+  }
+}

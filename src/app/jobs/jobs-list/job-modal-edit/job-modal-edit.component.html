@@ -1,0 +1,42 @@
+<app-modal header="Edit Job" [visible]="(data | async).visible" (onChangeVisible)="onChangeVisible($event)">
+  <form *ngIf="form" [formGroup]="form" class="ui-fluid p-formgrid p-grid" (ngSubmit)="onSubmit()">
+    <div class="p-field p-col-6">
+      <label for="title">Title</label>
+      <app-input [form]="form"
+                 id="title"
+                 formControlName="title"
+                 placeholder="Title"
+      >
+      </app-input>
+    </div>
+    <div class="p-field p-col-3">
+      <label for="location">Location</label>
+      <app-dropdown [options]="jobService.countries"
+                    [filter]="true"
+                    [form]="form"
+                    id="location"
+                    formControlName="location"
+                    optionLabel="name"
+                    placeholder="All Countries"
+      >
+      </app-dropdown>
+    </div>
+    <div class="p-field p-col-3">
+      <label for="level">Level</label>
+      <app-dropdown [options]="jobService.levels"
+                    [filter]="true"
+                    [form]="form"
+                    id="level"
+                    formControlName="level"
+                    optionLabel="name"
+                    placeholder="All Level"
+      >
+      </app-dropdown>
+    </div>
+    <br><br>
+    <p-footer class="d-flex justify-content-end">
+      <app-button type="submit" label="Update" style="margin-right: 12px"></app-button>
+      <app-button label="Close" className="ui-button-secondary m-left-20" (onClick)="onChangeVisible(false)"></app-button>
+    </p-footer>
+  </form>
+</app-modal>

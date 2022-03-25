@@ -1,0 +1,32 @@
+<div class="jobs-list-filter m-top-20 m-bottom-30">
+  <form [formGroup]="form">
+    <app-input-search [form]="form" formControlName="search" placeholder="Search for jobs"></app-input-search>
+    <p class="fw-600 text-gray-4 m-top-20 m-bottom-8">FILTER BY</p>
+    <div class="d-flex w-100 justify-content-space-between filter-dropdown-group">
+      <app-dropdown [options]="departments"
+                    [filter]="false"
+                    [form]="form"
+                    formControlName="department"
+                    optionLabel="name"
+                    placeholder="All Departments"
+      >
+      </app-dropdown>
+      <app-dropdown [options]="countries"
+                    [filter]="true"
+                    [form]="form"
+                    formControlName="location"
+                    optionLabel="name"
+                    placeholder="All Countries"
+      >
+      </app-dropdown>
+      <app-dropdown [options]="types"
+                    [filter]="false"
+                    [form]="form"
+                    formControlName="type"
+                    optionLabel="name"
+                    placeholder="All Types"
+      >
+      </app-dropdown>
+    </div>
+  </form>
+</div>

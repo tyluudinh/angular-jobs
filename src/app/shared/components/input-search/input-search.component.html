@@ -1,0 +1,13 @@
+<div class="input-search">
+  <span class="p-input-icon-left w-100" [formGroup]="form">
+    <i class="pi pi-search"></i>
+    <input
+      pInputText
+      #input
+      [formControlName]="formControlName"
+      [placeholder]="placeholder || ''"
+      (ngModelChange)="onModelChange($event)"
+      type="text" class="w-100"
+    />
+  </span>
+</div>

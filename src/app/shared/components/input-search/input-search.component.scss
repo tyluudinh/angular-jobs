@@ -1,0 +1,15 @@
+.p-input-icon-left {
+  position: relative;
+  display: inline-block;
+  .pi-search {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+    font-size: 1rem;
+    left: 0.75rem;
+    color: var(--color-system-gray-2);
+  }
+  input {
+    padding-left: 2.5rem;
+  }
+}

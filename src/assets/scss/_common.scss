@@ -1,0 +1,95 @@
+:root {
+  --color-system-gray-4: #303737;
+  --color-system-gray-3: #dee2e6;
+  --color-system-gray-2: #747c79;
+  --color-system-gray-1: #7a8a9b;
+  --color-system-gray-0: #2b2e31;
+  --color-system-red: #ef6360;
+  --color-system-yellow: #fbe260;
+  --color-system-green: #12877c;
+}
+
+$colors: "gray-4", "gray-3", "gray-2", "gray-1", "gray-0", "red", "yellow", "green";
+$aligns: stretch, center, flex-start, flex-end, baseline, initial, inherit;
+$justifies: flex-start, flex-end, center, space-between, space-around, space-evenly, initial, inherit;
+$font-weights: normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, initial, inherit;
+$positions: top, right, bottom, left;
+
+@each $color in $colors {
+  .text-#{$color} {
+    color: var(--color-system-#{$color});
+  }
+  .bg-#{$color} {
+    background-color: var(--color-system-#{$color});
+  }
+}
+
+@each $align in $aligns {
+  .align-items-#{$align} {
+    align-items: $align;
+  }
+}
+
+@each $justify in $justifies {
+  .justify-content-#{$justify} {
+    justify-content: $justify;
+  }
+}
+
+@each $font-weight in $font-weights {
+  .fw-#{$font-weight} {
+    font-weight: $font-weight;
+  }
+}
+
+@for $i from 1 through 4 {
+  .w-#{$i * 25} {
+    width: #{$i * 25} + #{"%"};
+  }
+}
+@for $i from 1 through 30 {
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+  @each $pos in $positions {
+    .m-#{$pos}-#{$i} {
+      margin-#{$pos}: #{$i}px;
+    }
+    .p-#{$pos}-#{$i} {
+      padding-#{$pos}: #{$i}px;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.d-flex {
+  display: flex;
+}
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin-block: 0;
+  margin-inline: 0;
+}

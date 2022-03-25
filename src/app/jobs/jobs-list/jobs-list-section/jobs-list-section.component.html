@@ -1,0 +1,17 @@
+<div class="jobs-list-card m-bottom-30 m-top-20">
+  <div class="header d-flex justify-content-space-between m-bottom-10">
+    <h3 class="text-gray-0 d-flex align-items-center uppercase">
+      <i class="pi pi-briefcase m-right-8"></i>
+      <span>{{jobsList.department}}</span>
+    </h3>
+    <p class="text-gray-1">
+      {{jobsList.lists.length}} openings
+    </p>
+  </div>
+  <div class="jobs">
+    <app-jobs-list-card *ngFor="let job of jobsList.lists" [job]="job"
+                        (onClickEdit)="handleOnClickEdit($event)"
+    >
+    </app-jobs-list-card>
+  </div>
+</div>
